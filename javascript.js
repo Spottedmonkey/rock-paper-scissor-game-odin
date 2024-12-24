@@ -36,7 +36,7 @@ function playGame() {
         } else if (humanChoice === computerChoice) {
             alert ("Yeah, it's a tie")
         } else {
-            alert("You lose suckah!");
+            alert("Computer won this round!");
             computerScore += 1;
         }
     }
