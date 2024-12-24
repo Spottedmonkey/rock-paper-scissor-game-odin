@@ -42,9 +42,7 @@ function playGame() {
     }
     playRound(computerChoice, humanChoice); 
     console.log(`You chose ${humanChoice} and the computer chose ${computerChoice}`);
-    console.log(`Your current score is ${humanScore}.`);
-    console.log(`The computers current score is ${computerScore}.`);
-   
+    console.log(`Your current score: ${humanScore}\nComputer's current score: ${computerScore}`);
 }
 
 for (let i = 0; i < 5; i++) {
