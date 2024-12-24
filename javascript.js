@@ -9,12 +9,12 @@ function playGame() {
         } else if (randomInt == 1) {
             return "Paper";
         } else {
-            return "Scissors";
+            return "Scissor";
         };
     }
     
     function getHumanChoice(choice) {
-        choice = prompt("Will you choose Rock, Paper or Scissors?")
+        choice = prompt("Will you choose Rock, Paper or Scissor?")
         choice = choice.toLowerCase()
         choice = choice[0].toUpperCase() + choice.slice(1);
         return choice
@@ -27,10 +27,10 @@ function playGame() {
         if (humanChoice === "Paper" && computerChoice === "Rock") {
             alert ("You won this round");
             humanScore += 1;
-        } else if (humanChoice === "Rock" && computerChoice === "Scissors") {
+        } else if (humanChoice === "Rock" && computerChoice === "Scissor") {
             alert ("You won this round");
             humanScore += 1;
-        } else if (humanChoice === "Scissors" && computerChoice === "Paper") {
+        } else if (humanChoice === "Scissor" && computerChoice === "Paper") {
             alert ("You won this round");
             humanScore += 1;
         } else if (humanChoice === computerChoice) {
