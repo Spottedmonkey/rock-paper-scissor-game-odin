@@ -49,12 +49,12 @@ for (let i = 0; i < 5; i++) {
     playGame()
 }
 
-console.log("%cThe game has ended", "color: cornflowerblue; font-weight: bold; font-size: 15px;");
+alert("The game has ended");
 
 if (humanScore > computerScore) {
-    console.log("%cYou won the game!", "color:lime; font-size: 18px;")
+    alert("You won the game!")
 } else if (humanScore < computerScore) {
-    console.log("%cAhahahah, you lose!", "color:red; font-size: 18px;")
+    alert("Ahahahah, you lose!")
 } else {
-    console.log("%cEh, let's call it a draw", "color:lightblue; font-size: 18px;")
+    alert("Eh, let's call it a draw")
 }
