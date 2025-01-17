@@ -26,15 +26,19 @@ function playRound(computerChoice, humanChoice) {
         humanScore++;
     } else if (humanChoice === computerChoice) {
         alert ("Yeah, it's a tie")
+        humanScore++;
+        computerScore++;
     } else {
         alert("Computer won this round!");
         computerScore++;
     };
 
     roundsPlayed++;
-    roundStats.textContent = `Rounds played: ${roundsPlayed}`;
-    humanStats.textContent = `Your score: ${humanScore}`;
-    computerStats.textContent = `Computer's score: ${computerScore}`;
+    roundNumber.textContent = `${roundsPlayed}`;
+    humanNumber.textContent = `${humanScore}`;
+    computerNumber.textContent = `${computerScore}`;
+    // humanPlay.textContent = `${humanChoice}`;
+    // computerPlay.textContent = `${computerChoice}`
 
     if (humanScore == 5 || computerScore == 5) {
         rockBtn.disabled = true;
@@ -48,19 +52,25 @@ let humanScore = 0;
 let computerScore = 0;
 let roundsPlayed = 0;
 
-const roundStats = document.querySelector('#round-stats');
-const humanStats = document.querySelector('#human-stats');
-const computerStats = document.querySelector('#computer-stats');
+const roundNumber = document.querySelector('#round-number')
+const humanNumber = document.querySelector('#human-number');
+const computerNumber = document.querySelector('#computer-number');
 
 const rockBtn = document.querySelector('#rock-btn');
 const paperBtn = document.querySelector('#paper-btn');
 const scissorsBtn = document.querySelector('#scissors-btn');
 
+const humanPlay = document.querySelector('#human-play');
+const computerPlay = document.querySelector('#computer-play');
+
+const playerMoveImg = document.querySelector('#player-move-img');
+
 
 rockBtn.addEventListener('click', () => {
     humanChoice = 'Rock';
+    playerMoveImg.src = './images/rock-rps-odin.png';
     computerChoice = getComputerChoice();
-    playRound(computerChoice, humanChoice)
+    playRound(computerChoice, humanChoice);
     console.log(humanChoice);
     console.log(computerChoice);
     console.log(humanScore);
@@ -70,6 +80,7 @@ rockBtn.addEventListener('click', () => {
 
 paperBtn.addEventListener('click', () => {
     humanChoice = 'Paper';
+    playerMoveImg.src = './images/paper-rps-odin.png';
     computerChoice = getComputerChoice();
     playRound(computerChoice, humanChoice);
     console.log(humanChoice);
@@ -81,6 +92,7 @@ paperBtn.addEventListener('click', () => {
 scissorsBtn.addEventListener('click', () => {
     humanChoice = 'Scissors';
     computerChoice = getComputerChoice();
+    playerMoveImg.src = './images/scissors-rps-odin.png';
     playRound(computerChoice, humanChoice);
     console.log(humanChoice);
     console.log(computerChoice);
