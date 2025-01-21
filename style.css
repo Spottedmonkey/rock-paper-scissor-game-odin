@@ -20,7 +20,7 @@ body {
     position: fixed;
     top: 50%;
     left: 50%;
-    margin-top: -150px;
+    margin-top: -250px;
     margin-left: -225px;
 }
 
@@ -39,22 +39,34 @@ body {
     flex-direction: column;
     align-items: center;
     width: 100%;
-    padding-bottom: 20px;
     padding-top: 100px;
     background-color: #Fdb095;
 }
 
-#tip-container h3 {
+#tip-container-header {
     font-weight: 900;
     color: #130225;
     font-size: 20px;
+    margin-bottom: 3px;
+    margin-top: 10px;
 }
 
-#tip-container p {
+#instruction-content {
     color: #130225;
     font-weight: 700;
     font-size: 14px;
     padding: 0 20px;
+}
+
+#tip-container button {
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+#tip-container button img {
+    width: 20px;
+    height: 20px;
 }
 
 #game-stats {
@@ -83,6 +95,12 @@ body {
     color: #130225;
     font-size: 25px;
     font-weight: 600;
+}
+
+#outcome-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
 }
 
 #moves-played {
@@ -125,11 +143,39 @@ body {
 
 #play-buttons button {
     width: 80px;
+    height: 40px;
     background-color: #ecebe4;
     color: #130225;
     border: none;
     border-radius: 4px;
     padding: 5px;
     font-weight: 700;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+#restart-button-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#restart-button {
+    color: #130225;
+    height: 40px;
+    margin-top: 10px;
+    border-radius: 4px;
+    font-size: 16px;
+    font-weight: 700;
+    width: 260px;
+    border: none;
+    cursor: pointer;
+    background-color: #ecebe4;
+}
+
+#tip-container button:hover,
+#play-buttons button:hover,
+#restart-button:hover {
+    transform: scale(1.07);
 }
 
