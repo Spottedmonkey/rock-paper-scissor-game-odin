@@ -9,8 +9,11 @@
 
     <body>
         <div id="tip-container">
-            <h3>Instructions</h3>
-            <p>In order to start the game click on one of the "rock, paper, scissors" buttons below, the game only lasts until one of the players have reached a score of 5.</p>
+            <h3 id="tip-container-header">Instructions</h3>
+            <p id="instruction-content">In order to start the game click on one of the "rock, paper, scissors" buttons below, the game only lasts until one of the players have reached a score of 5.</p>
+            <button>
+                <img id="instruction-reveal" src="./images/arrow-up-sign-to-navigate.png">
+            </button>
         </div>
 
         <div id="gameplay-interface">
@@ -28,6 +31,10 @@
                 </div>
             </div>
 
+            <div id="outcome-container">
+                <h2 id="round-outcome">Let's play!</h2>
+            </div>
+
             <div id="moves-played">
                 <div class="players-moves">
                     <h3>Your move</h3>
@@ -35,7 +42,7 @@
                 </div>
                 <div class="players-moves">
                     <h3>Computer's move</h3>
-                    <img src="./images/rex-rps-odin.png">
+                    <img id="computer-move-img" src="./images/rex-rps-odin.png">
                 </div>
             </div>
 
@@ -44,8 +51,15 @@
                 <button id="paper-btn">Paper</button>
                 <button id="scissors-btn">Scissors</button>
             </div>
+
+            <div id="restart-button-container">
+                <button id="restart-button">Restart the game</button>
+            </div>
         </div>
+
+        
         
         <script src="javascript.js"></script>
     </body>
 </html>
+
